@@ -10,8 +10,8 @@ class VectorQueryPayload extends AbstractPayload
         public readonly array $filter = [],
         public readonly bool $includeValues = false,
         public readonly bool $includeMetadata = false,
-        public readonly ?string $vector = null,
-        public readonly ?string $sparse_vector = null,
+        public readonly array $vector = [],
+        public readonly ?VectorSparseValuesPayload $sparseVector = null,
         public readonly ?string $id = null,
     ) {
     }
