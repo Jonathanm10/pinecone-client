@@ -1,4 +1,4 @@
-# A simple PHP wrapper around Pinecone API
+# A simple PHP wrapper around Pinecone API (Unofficial)
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/jonathanm10/pinecone-client.svg?style=flat-square)](https://packagist.org/packages/jonathanm10/pinecone-client)
 [![Tests](https://img.shields.io/github/actions/workflow/status/jonathanm10/pinecone-client/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/jonathanm10/pinecone-client/actions/workflows/run-tests.yml)
@@ -15,9 +15,20 @@ composer require jonathanm10/pinecone-client
 ## Usage
 
 ```php
-$skeleton = new Jonathanm10\PineconeClient();
-echo $skeleton->echoPhrase('Hello, Jonathanm10!');
+$client = Pinecone::init([
+    'api_key' => 'xxxx-xxx-xxxx-xxxx',
+    'environment' => 'us-east-1-aws',
+]);
+
+// Accessing the index API
+$client->index();
+
+// Accessing the vector API
+$client->vector();
 ```
+
+All Pinecone's methods are available as methods on the client: https://docs.pinecone.io/reference/describe_index_stats_post
+
 
 ## Testing
 
