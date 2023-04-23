@@ -11,6 +11,7 @@ class ApiExceptionFactory
     {
         $statusCode = $e->getResponse()->getStatusCode();
         $message = sprintf('Error %s: %s', $statusCode, $e->getResponse()->getBody());
+
         return match ($statusCode) {
             400 => new BadRequestException($message, $statusCode),
             404 => new NotFoundException($message, $statusCode),

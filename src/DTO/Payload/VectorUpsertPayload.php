@@ -10,7 +10,6 @@ class VectorUpsertPayload extends AbstractPayload
         #[TypedArray(VectorPayload::class)]
         public readonly array $vectors,
         public readonly string $namespace = '',
-    )
-    {
+    ) {
     }
 }

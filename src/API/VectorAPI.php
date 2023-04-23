@@ -138,7 +138,7 @@ class VectorAPI extends AbstractAPI
      */
     protected function whoAmI(): string
     {
-        $content = $this->httpClient->get($this->controllerUrl() . '/actions/whoami')->getBody();
+        $content = $this->httpClient->get($this->controllerUrl().'/actions/whoami')->getBody();
 
         $content = json_decode($content, true, 512, JSON_THROW_ON_ERROR);
 

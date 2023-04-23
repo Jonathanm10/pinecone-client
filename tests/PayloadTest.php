@@ -14,7 +14,7 @@ it('should recursively validate mandatory attributes', function () {
         ]);
     } catch (InvalidArgumentException $e) {
         expect($e->getMessage())
-            ->toBe("Mandatory attribute 'indices' is missing from '" . VectorSparseValuesPayload::class . "'");
+            ->toBe("Mandatory attribute 'indices' is missing from '".VectorSparseValuesPayload::class."'");
     }
 });
 
